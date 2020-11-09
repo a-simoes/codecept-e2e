@@ -1,0 +1,26 @@
+{
+    "name": "picking-service-e2e",
+    "private": true,
+    "scripts": {
+        "cjs": "codeceptjs",
+        "tests": "codeceptjs run --steps",
+        "tests:pauseOnFail": "PAUSE_ON_FAIL=true codeceptjs run --steps",
+        "tests:current": "codeceptjs run --steps --debug --grep @current",
+        "tests:chromium": "BROWSER=chromium codeceptjs run --steps",
+        "tests:chromium:headless": "HEADLESS=true BROWSER=chromium codeceptjs run --steps",
+        "tests:firefox": "BROWSER=firefox codeceptjs run --steps",
+        "tests:firefox:headless": "HEADLESS=true BROWSER=firefox codeceptjs run --steps",
+        "tests:webdriver:chrome": "HELPER=webdriver BROWSER=chrome codeceptjs run --steps",
+        "tests:webdriver:firefox": "HELPER=webdriver BROWSER=firefox codeceptjs run --steps",
+        "reporter:allure": "allure serve output/allure"
+    },
+    "devDependencies": {
+        "@codeceptjs/configure": "^0.6.0",
+        "@wdio/cli": "6.3.6",
+        "codeceptjs": "^2.6.9",
+        "codeceptjs-webdriverio": "^1.1.0",
+        "mocha": "8.1.3",
+        "playwright": "^1.5.2",
+        "webdriver": "^6.7.1"
+    }
+}

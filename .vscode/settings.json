@@ -1,0 +1,11 @@
+{
+  "explorer.compactFolders": false,
+  "autoimport.doubleQuotes": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.useEditorConfig": false,
+  "editor.quickSuggestions": null,
+  "java.configuration.updateBuildConfiguration": "automatic"
+}

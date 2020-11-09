@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "Jest All",
+      "type": "node",
+      "request": "launch",
+      // "env": { "CI": "true" },
+      "runtimeExecutable": "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "test",
+        "--testMatch=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
+        "--runInBand",
+        "--no-cache"
+      ],
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      // "disableOptimisticBPs": true,
+    },
+    {
+      "name": "Jest Current File",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "test",
+        "--testMatch=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
+        "--testPathPattern=${fileBasenameNoExtension}",
+        "--runInBand",
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+    }
+  ]
+}

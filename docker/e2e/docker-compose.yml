@@ -1,0 +1,41 @@
+version: '3.3'
+
+services:
+  codeceptjs:
+    image: codeception/codeceptjs:latest
+    environment:
+      CODECEPT_ARGS: --debug
+      HELPER: webdriver
+      BROWSER: chrome
+      HOST: selenium-hub
+    depends_on:
+      - selenium-chrome
+      - selenium-firefox
+      - selenium-hub
+    volumes:
+      - ./../codeceptjs/:/tests
+
+  selenium-chrome:
+    image: selenium/node-chrome:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      HUB_HOST: selenium-hub
+
+  selenium-firefox:
+    image: selenium/node-firefox:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      HUB_HOST: selenium-hub
+
+  selenium-hub:
+    image: selenium/hub:latest
+    ports:
+      - "4444:4444" 
+
+  
