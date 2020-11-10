@@ -13,7 +13,7 @@ services:
       - selenium-firefox
       - selenium-hub
     volumes:
-      - ./../codeceptjs/:/tests
+      - ./../../codeceptjs/:/tests
 
   selenium-chrome:
     image: selenium/node-chrome:latest

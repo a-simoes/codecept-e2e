@@ -1,5 +1,5 @@
 const assert = require('assert');
-const GeneralConfigurations = require('./../general.conf');
+const GeneralConfigurations = require('./../general.confs');
 
 module.exports = {
   url: GeneralConfigurations.siteUrl(),
