@@ -54,6 +54,7 @@ First start containers with
 `docker-compose up` - will start all containers and also codeceptjs (will fail to run tests)
 
 Then run the tests in a new terminal with:
+
 `docker-compose run --rm codeceptjs` - run tests in docker with Webdriver and browser chrome
 
 `docker-compose run --rm -e BROWSER=firefox codeceptjs` - run tests in docker Webdriver and browser firefox
